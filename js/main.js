@@ -8,8 +8,11 @@ const button = document.querySelector('.js_button');
 const sms = document.querySelector('.js_sms');
 const money = document.querySelector('.js_money');
 const total = document.querySelector('.js_total');
+
+/* Inicio de intento frustrado de añadir cambio en el saldo */
 const earnedMoney = number * 2 + money; 
 const lostMoney = number * 2 - money; 
+/* Fin de intento frustrado de añadir cambio en el saldo */
 
 const random = getRandomNumber(6);
 
@@ -33,6 +36,20 @@ if (selectNumber === random) {
     sms.innerHTML = "¡Oh! Has perdido lo apostado."
 }
 }
+
+/* Inicio de intento frustrado de función de apuesta */
+
+function moneyBet() {
+    const selectNumber = parseInt(select.value);
+
+    if (selectNumber === random) {
+        total.innerHTML = `Saldo = ${earnedMoney.value}`; 
+    } else {
+        total.innerHTML = `Saldo = ${lostMoney.value}`;
+    }
+}
+
+/* Final de intento frustrado de función de apuesta */
 
 /* Función base */
 

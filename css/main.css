@@ -34,6 +34,7 @@
   color: goldenrod;
   margin: 5px;
   font-weight: 600;
+  text-align: center;
 }
 
 .button {
@@ -50,7 +51,6 @@
   display: flex;
   justify-content: center;
   padding: 10px;
-  width: 200px;
 }
 
 .final {
