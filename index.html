@@ -10,10 +10,10 @@
   </head>
   <body>
     <main class="main">
-      <h1>Dados y Apuestas</h1>
-      <p>Introduce aquí tu jugada:</p>
-      <form>
-        <select class="js_select">
+      <h1 class="title">Dados y Apuestas</h1>
+      <p class="text">Introduce aquí tu jugada:</p>
+      <form class="form">
+        <select class="js_select form-text">
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -22,15 +22,15 @@
           <option>6</option>
         </select>
         <input
-          class="js_number"
+          class="js_number form-text"
           type="number"
           placeholder="¿Cuánto apuestas?"
         />
-        <input class="js_button" type="button" value="Jugar" />
+        <input class="js_button button" type="button" value="Jugar" />
       </form>
-      <p>Vamos a Jugar!</p>
-      <span class="js_sms"></span>
-      <p>Saldo: <span class="js_money">50</span></p>
+      <p class="text">Vamos a Jugar!</p>
+      <span class="js_sms text-new"></span>
+      <p class="js_total final">Saldo: <span class="js_money">50</span></p>
     </main>
     <!--LINK JAVASCRIPT-->
     <script src="./js/main.js"></script>

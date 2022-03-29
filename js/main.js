@@ -7,8 +7,12 @@ const select = document.querySelector('.js_select');
 const button = document.querySelector('.js_button');
 const sms = document.querySelector('.js_sms');
 const money = document.querySelector('.js_money');
+const total = document.querySelector('.js_total');
+const earnedMoney = number * 2 + money; 
+const lostMoney = number * 2 - money; 
 
 const random = getRandomNumber(6);
+
 
 // FUNCIONES Y CONDICIONALES //
 
@@ -35,6 +39,7 @@ if (selectNumber === random) {
 function handleClickButton(event) {
     event.preventDefault();
     chooseNumber();
+    moneyBet();
 }
 
 // EVENTOS // 

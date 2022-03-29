@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 10px dotted aquamarine;
+}
+
+.title {
+  color: salmon;
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.form-text {
+  margin: 5px;
+  padding: 5px;
+  border: 2px grey solid;
+}
+
+.text-new {
+  color: goldenrod;
+  margin: 5px;
+  font-weight: 600;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px salmon solid;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 200px;
+}
+
+.final {
+  text-decoration: 5px underline aquamarine;
+}
