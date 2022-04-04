@@ -14,9 +14,6 @@ const earnedMoney = number * 2 + money;
 const lostMoney = number * 2 - money; 
 /* Fin de intento frustrado de añadir cambio en el saldo */
 
-const random = getRandomNumber(6);
-
-
 // FUNCIONES Y CONDICIONALES //
 
 /* Número aleatorio */
@@ -55,6 +52,7 @@ function moneyBet() {
 
 function handleClickButton(event) {
     event.preventDefault();
+    const random = getRandomNumber(6);
     chooseNumber();
     moneyBet();
 }
