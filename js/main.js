@@ -2,17 +2,11 @@
 
 // CONSTANTES //
 
-// selectElement
 const select = document.querySelector('.js_select');
-// btn
 const button = document.querySelector('.js_button');
-// result
 const sms = document.querySelector('.js_sms');
-// saldo
 const total = document.querySelector('.js_total');
-// cantidad
 const amount = document.querySelector('.js_amount');
-// salValue
 let betValue = 50; 
 
 // FUNCIONES Y CONDICIONALES //
