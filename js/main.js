@@ -2,17 +2,18 @@
 
 // CONSTANTES //
 
-const number = document.querySelector('.js_number');
+// selectElement
 const select = document.querySelector('.js_select');
+// btn
 const button = document.querySelector('.js_button');
+// result
 const sms = document.querySelector('.js_sms');
-const money = document.querySelector('.js_money');
+// saldo
 const total = document.querySelector('.js_total');
-
-/* Inicio de intento frustrado de añadir cambio en el saldo */
-const earnedMoney = number * 2 + money; 
-const lostMoney = number * 2 - money; 
-/* Fin de intento frustrado de añadir cambio en el saldo */
+// cantidad
+const amount = document.querySelector('.js_amount');
+// salValue
+let betValue = 50; 
 
 // FUNCIONES Y CONDICIONALES //
 
@@ -22,39 +23,31 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
    }
 
-/* Seleccionar número */
+/* Jugar y apostar */
 
-function chooseNumber() {
-const selectNumber = parseInt(select.value);
-
-if (selectNumber === random) {
-    sms.innerHTML = "¡Has ganado el doble de lo apostado!"
+function gameplay(selectNumber, random) {
+const selectAmount = parseInt(amount.value);
+if (selectAmount > betValue) {
+    total.innerHTML = "No puedes apostar más de lo que tienes";
 } else {
-    sms.innerHTML = "¡Oh! Has perdido lo apostado."
+if (selectNumber === random) {
+    sms.innerHTML = "¡Has ganado el doble de lo apostado!";
+    betValue = selectAmount * 2 + betValue;
+} else {
+    sms.innerHTML = "¡Oh! Has perdido lo apostado.";
+    betValue = betValue - selectAmount;
+}
+total.innerHTML = `Saldo: ${betValue}`;
 }
 }
 
-/* Inicio de intento frustrado de función de apuesta */
-
-function moneyBet() {
-    const selectNumber = parseInt(select.value);
-
-    if (selectNumber === random) {
-        total.innerHTML = `Saldo = ${earnedMoney.value}`; 
-    } else {
-        total.innerHTML = `Saldo = ${lostMoney.value}`;
-    }
-}
-
-/* Final de intento frustrado de función de apuesta */
-
-/* Función base */
+/* Función manejadora */
 
 function handleClickButton(event) {
     event.preventDefault();
+    const selectNumber = parseInt(select.value);
     const random = getRandomNumber(6);
-    chooseNumber();
-    moneyBet();
+    gameplay(selectNumber, random);
 }
 
 // EVENTOS // 
