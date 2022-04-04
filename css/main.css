@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* MAIN */
+
 .main {
   height: 100vh;
   display: flex;
@@ -13,10 +15,14 @@
   border: 10px dotted aquamarine;
 }
 
+/* DADOS Y APUESTAS */
+
 .title {
   color: salmon;
   margin-bottom: 20px;
 }
+
+/* INTRODUCE AQUÍ TU JUGADA */
 
 .text {
   margin-bottom: 10px;
@@ -24,18 +30,30 @@
   font-weight: 700;
 }
 
+/* INPUT DE APUESTAS */
+
 .form-text {
   margin: 5px;
   padding: 5px;
   border: 2px grey solid;
 }
 
-.text-new {
+/* TEXTO OCULTO */ 
+
+.js_sms {
   color: goldenrod;
   margin: 5px;
   font-weight: 600;
   text-align: center;
 }
+
+/* SALDO */
+
+.final {
+  text-decoration: 5px underline aquamarine;
+}
+
+/* BOTÓN */
 
 .button {
   display: flex;
@@ -47,12 +65,11 @@
   border: 2px salmon solid;
 }
 
+/* FORMULARIO */
+
 .form {
   display: flex;
   justify-content: center;
   padding: 10px;
 }
 
-.final {
-  text-decoration: 5px underline aquamarine;
-}
